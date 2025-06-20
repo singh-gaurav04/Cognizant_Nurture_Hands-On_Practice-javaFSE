@@ -36,7 +36,7 @@ Root/
   * **Project Name Folder**: contains code and markdown
 
     * `*.java`: fully working Java implementation
-    * `README.md` or `Code.md`: explanation, approach, and output screenshot(s)
+    * `output.md`: explanation, approach, and output screenshot(s)
 
 ---
 
@@ -44,7 +44,7 @@ Root/
 
 ### 1. View Assignment Description + Output
 
-* Open the `Code.md` file in each project folder.
+* Open the `output.md` file in each project folder.
 * You’ll find:
 
   * ✍️ **Problem/Assignment description**

@@ -1,6 +1,6 @@
 # Cognizant Digital Nurture 4.0 JavaFSE Deep Skilling Repository
 
-Welcome to the central repository for all assignments and hands-on projects completed during the Cognizant Digital Nurture 4.0 JavaFSE Deep Skilling Phase.
+A central repository for all assignments and hands-on projects completed during the Cognizant Digital Nurture 4.0 JavaFSE Deep Skilling Phase.
 
 ---
 

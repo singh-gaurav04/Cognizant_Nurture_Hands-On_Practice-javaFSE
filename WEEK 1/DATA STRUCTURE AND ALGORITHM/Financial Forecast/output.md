@@ -92,11 +92,11 @@ Follow the on-screen prompts. To run it again, just enter "y" when asked.
 
 ### Code Screenshot
 
-![Code Screenshot](![alt text](image.png))
+![Code Screenshot](![code screen](image.png))
 
 ### Output Screenshot
 
-![Output Screenshot](![alt text](image-1.png))
+![Output Screenshot](![output screen](image-1.png))
 
 ---
 
@@ -109,4 +109,4 @@ Follow the on-screen prompts. To run it again, just enter "y" when asked.
 
 ---
 
-© 2025 Gaurav — All rights reserved.
+© Gaurav Singh 

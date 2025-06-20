@@ -37,7 +37,7 @@ This is a simple Java console application that allows users to search for produc
 
 ### Output Screenshot
 
-![Output Screenshot](![output screen](image-3.png))
+![output screen](image-3.png)
 
 ---
 

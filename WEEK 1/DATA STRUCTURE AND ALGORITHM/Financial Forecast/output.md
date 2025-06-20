@@ -92,11 +92,10 @@ Follow the on-screen prompts. To run it again, just enter "y" when asked.
 
 ### Code Screenshot
 
-![Code Screenshot](![code screen](image.png))
+(image.png)
 
 ### Output Screenshot
-
-![Output Screenshot](![output screen](image-1.png))
+(image-1.png)
 
 ---
 

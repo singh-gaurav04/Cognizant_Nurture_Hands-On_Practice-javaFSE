@@ -31,13 +31,13 @@ This is a simple Java console application that allows users to search for produc
 
 ### Code Screenshot
 
-![Code Screenshot](![java file](image.png))
-![Code Screenshot](![productsearch file](image-1.png))
-![Code Screenshot](![product class](image-2.png))
+![java file](image.png)
+![productsearch file](image-1.png)
+![product class](image-2.png)
 
 ### Output Screenshot
 
-![Output Screenshot](![output screen](image-3.png))
+![output screen](image-3.png)
 
 ---
 

@@ -17,11 +17,11 @@ Root/
 │   ├── DSA/
 │   │   ├── FinancialForecast/
 │   │   │   ├── FinancialForecast.java
-│   │   │   └── code.md
+│   │   │   └── README.md
 │   ├── DESIGN_PRINCIPLES/
 │   │   ├── SingletonPattern/
 │   │   │   ├── Singleton.java
-│   │   │   └── Code.md
+│   │   │   └── README.md
 │   └── ...
 │
 ├── WEEK2/

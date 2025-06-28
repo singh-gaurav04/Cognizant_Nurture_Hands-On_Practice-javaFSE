@@ -1,0 +1,61 @@
+CREATE OR REPLACE PROCEDURE TRANSFERFUNDS (
+    FROMACCOUNTID IN NUMBER,
+    TOACCOUNTID  IN NUMBER,
+    AMOUNT  IN NUMBER
+) IS
+    V_SOURCEBALANCE NUMBER;
+    EX_INSUFFICIENTFUNDS EXCEPTION;
+BEGIN
+    SELECT BALANCE INTO V_SOURCEBALANCE
+    FROM ACCOUNTS
+    WHERE ACCOUNTID = FROMACCOUNTID;
+
+	
+    IF V_SOURCEBALANCE < AMOUNT THEN
+        RAISE EX_INSUFFICIENTFUNDS;
+     END IF;
+
+    UPDATE ACCOUNTS
+    SET
+     BALANCE = BALANCE - AMOUNT,
+     LASTMODIFIED = SYSDATE
+    WHERE
+     ACCOUNTID = FROMACCOUNTID;
+    UPDATE ACCOUNTS
+    SET
+     BALANCE = BALANCE + AMOUNT,
+     LASTMODIFIED = SYSDATE
+    WHERE
+        ACCOUNTID = TOACCOUNTID;    
+    COMMIT;
+
+EXCEPTION
+
+    WHEN EX_INSUFFICIENTFUNDS THEN
+    DBMS_OUTPUT.PUT_LINE('Transfer failed: Insufficient balance.');
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Transfer failed: ' || SQLERRM);
+END;
+/
+BEGIN
+    TRANSFERFUNDS(1, 2, 500);
+END;
+/
+SELECT * FROM ACCOUNTS;
+
+--Before
+
+-- ACCOUNTID CUSTOMERID ACCOUNTTYPE BALANCE    LASTMODIFIED              
+-- --------- ---------- ----------- ---------- ------------------------- 
+-- 1         1          Savings     2570.75401 06/28/2025, 11:18:59 PM   
+-- 2         2          Checking    0          06/27/2025, 01:28:39 PM   
+
+--After
+
+-- ACCOUNTID CUSTOMERID ACCOUNTTYPE BALANCE    LASTMODIFIED              
+-- --------- ---------- ----------- ---------- ------------------------- 
+-- 1         1          Savings     2070.75401 06/28/2025, 11:31:15 PM   
+-- 2         2          Checking    500        06/28/2025, 11:31:15 PM   
+
+
+

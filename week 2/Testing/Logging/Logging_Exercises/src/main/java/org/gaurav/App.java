@@ -1,13 +1,13 @@
-package org.example;
+package org.gaurav;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        LoginService service = new LoginService();
+
+        service.login("");               // logs ERROR
+        service.login("admin");         // logs WARNING
+        service.login("gaurav");        // logs INFO
     }
 }

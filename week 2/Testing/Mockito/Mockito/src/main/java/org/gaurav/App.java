@@ -1,9 +1,4 @@
-package org.example;
-
-/**
- * Hello world!
- *
- */
+package org.gaurav;
 public class App 
 {
     public static void main( String[] args )
